@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoxMel &mdash; Audio Samples</title>
+<style>
+  :root { --line: #e4e4e7; --ours: #0f62fe; }
+  body { margin: 0 auto; padding: 48px 24px 96px; max-width: 1180px;
+         font: 15px/1.6 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+         color: #18181b; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  h3 { font-size: 17px; margin: 44px 0 12px; }
+  .sub { color: #52525b; margin: 0 0 4px; }
+  .note { color: #71717a; font-size: 13px; margin: 20px 0 0; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid var(--line);
+            text-align: center; vertical-align: middle; white-space: nowrap; }
+  thead th { font-weight: 600; font-size: 13px; color: #52525b;
+              border-bottom: 2px solid #d4d4d8; }
+  th.ours { color: var(--ours); }
+  td.text { text-align: left; white-space: normal; min-width: 260px;
+             max-width: 340px; color: #3f3f46; }
+  td.na { color: #a1a1aa; }
+  audio { width: 190px; height: 34px; vertical-align: middle; }
+  tbody tr:hover { background: #fafafa; }
+</style>
+</head>
+<body>
+  <h1>VoxMel</h1>
+  <p class="sub">Wavelet-Factorized Autoregressive Mel-Spectrogram Modeling
+  for Zero-Shot Speech Synthesis</p>
+
+  <h2>Main Results on Zero-Shot TTS</h2>
+  <p class="sub">Zero-shot voice cloning on the Seed-TTS-eval benchmarks.
+  VoxMel is the 690M supervised model; VoxMel&nbsp;+&nbsp;GRPO adds
+  frozen-head GRPO post-training. Both decode with 32 solver steps at
+  guidance (3.5,&nbsp;3.0).</p>
+
+  <h3>Seed-TTS test-en</h3>
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Prompt</th><th>Text</th><th class="ours">VoxMel</th><th class="ours">VoxMel + GRPO</th><th class="">VoxCPM-Emilia</th><th class="">VoxCPM</th><th class="">MaskGCT</th><th class="">CosyVoice 2</th><th class="">IndexTTS 2</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/13/prompt.wav"></audio></td>
+        <td class="text">After his execution Ogilvie's followers were rounded up and put in jail.</td>
+        <td><audio controls preload="none" src="audio/en/13/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/13/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/17/prompt.wav"></audio></td>
+        <td class="text">Rooftop Mounted for homes with no attics.</td>
+        <td><audio controls preload="none" src="audio/en/17/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/17/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/19/prompt.wav"></audio></td>
+        <td class="text">He later worked as a journalist, and then became a novelist and playwright.</td>
+        <td><audio controls preload="none" src="audio/en/19/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/19/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/23/prompt.wav"></audio></td>
+        <td class="text">Images of the pre-rendered cinematics also began to appear at this time.</td>
+        <td><audio controls preload="none" src="audio/en/23/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/23/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/26/prompt.wav"></audio></td>
+        <td class="text">Over time the couple has four more children, although William never warms to them.</td>
+        <td><audio controls preload="none" src="audio/en/26/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/26/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/en/29/prompt.wav"></audio></td>
+        <td class="text">Some transferred the conclusion to Ibsen, his translators and his director.</td>
+        <td><audio controls preload="none" src="audio/en/29/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/en/29/IndexTTS2.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Seed-TTS test-zh</h3>
+  <div class="scroll">
+  <table>
+    <thead>
+      <tr><th>Prompt</th><th>Text</th><th class="ours">VoxMel</th><th class="ours">VoxMel + GRPO</th><th class="">VoxCPM-Emilia</th><th class="">VoxCPM</th><th class="">MaskGCT</th><th class="">CosyVoice 2</th><th class="">IndexTTS 2</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/17/prompt.wav"></audio></td>
+        <td class="text">因为眼前奥斯比约恩的鱼篓里，就躺着一个活生生的小人。</td>
+        <td><audio controls preload="none" src="audio/zh/17/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/17/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/18/prompt.wav"></audio></td>
+        <td class="text">毒虫把毒品丢进马桶冲走，未料毒品又浮出水面，让警方逮个正着。</td>
+        <td><audio controls preload="none" src="audio/zh/18/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/18/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/21/prompt.wav"></audio></td>
+        <td class="text">人们建造了一座带教堂的医院，奉献给圣约然。</td>
+        <td><audio controls preload="none" src="audio/zh/21/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/21/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/38/prompt.wav"></audio></td>
+        <td class="text">本文旨在以苏联解体后，陆续解密的档案材料为根据。</td>
+        <td><audio controls preload="none" src="audio/zh/38/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/38/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/45/prompt.wav"></audio></td>
+        <td class="text">在妙手盘丝环节中，男嘉宾需要两位尖果选手盘发。</td>
+        <td><audio controls preload="none" src="audio/zh/45/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/45/IndexTTS2.wav"></audio></td>
+      </tr>
+      <tr>
+        <td><audio controls preload="none" src="audio/zh/58/prompt.wav"></audio></td>
+        <td class="text">一点五公里后，右转驶入京藏高速辅路。</td>
+        <td><audio controls preload="none" src="audio/zh/58/VoxMel.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/VoxMel_GRPO.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/VoxCPM-Emilia.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/VoxCPM.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/MaskGCT.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/CosyVoice2.wav"></audio></td><td><audio controls preload="none" src="audio/zh/58/IndexTTS2.wav"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+</body>
+</html>
